@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--- Tooltip player -->
+  <script type='text/javascript'>
+    window.Tooltip || function (t, e) {
+      var o = {
+        url: "https://cdn.tooltip.io/static/player.js",
+        key: "8e93c735-2d8c-47e2-9ed9-b3506aede214",
+        async: true
+      };
+      window.Tooltip = { cs: [], _apiKey: o.key }; for (
+        var r = ["identify", "goal", "updateUserData", "start", "stop", "refresh", "show", "hide", "on"],
+        i = {}, n = 0; n < r.length; n++) {
+        var a = r[n]; i[a] = function (t) {
+          return function () {
+            var e = Array.prototype.slice.call(arguments);
+            window.Tooltip.cs.push({ method: t, args: e })
+          }
+        }(a)
+      } window.Tooltip.API = i; var n = t.createElement(e), s = t.getElementsByTagName(e)[0];
+      n.type = "text/javascript", n.async = o.async, s.parentNode.insertBefore(n, s), n.src = o.url
+    }(document, "script");
+  </script>
+  <!--- Tooltip player -->
+</head>
+
+<body class="flex flex-col gap-4 justify-center items-center">
+  <section class="container">
+    <h1 class="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+  </section>
+</body>
+
+</html>
