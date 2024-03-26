@@ -11,18 +11,18 @@
     window.Tooltip || function (t, e) {
       var o = {
         url: "https://cdn.tooltip.io/static/player.js",
-        key: "8e93c735-2d8c-47e2-9ed9-b3506aede214",
+        key: "3d355a9d-24c9-4e78-8117-ff4ed1d5fe8b",
         async: true
       };
       window.Tooltip = { cs: [], _apiKey: o.key }; for (
         var r = ["identify", "goal", "updateUserData", "start", "stop", "refresh", "show", "hide", "on"],
         i = {}, n = 0; n < r.length; n++) {
-        var a = r[n]; i[a] = function (t) {
-          return function () {
-            var e = Array.prototype.slice.call(arguments);
-            window.Tooltip.cs.push({ method: t, args: e })
-          }
-        }(a)
+          var a = r[n]; i[a] = function (t) {
+            return function () {
+              var e = Array.prototype.slice.call(arguments);
+              window.Tooltip.cs.push({ method: t, args: e })
+            }
+          }(a)
       } window.Tooltip.API = i; var n = t.createElement(e), s = t.getElementsByTagName(e)[0];
       n.type = "text/javascript", n.async = o.async, s.parentNode.insertBefore(n, s), n.src = o.url
     }(document, "script");
